@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script defer src = "face-api.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script async src="https://imgbb.com/upload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!--   <script src="script.js"></script> -->
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Berkshire+Swash|Delius|Lakki+Reddy|Princess+Sofia|Redressed|Ruge+Boogie|Sacramento|Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="email.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+    <script defer src="script.js"></script>
+
+    <title>Santa Claus is Coming to Town!</title>
+
+    <!-- ------------------------- -->
+
+    <!--     <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+
+    <script></script>
+    <!-- -------------------------------   -->
+  </head>
+
+  <body>
+    <div id="main" class="container">
+      <div id="header">
+        <h1 class="text-center heading__inbox">
+          Santa's Costume Booth
+        </h1>
+
+        <nav class="nav nav-pills nav-fill menu">
+          <a class="nav-item nav-link" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="booth.html">Costume Booth</a>
+          <a class="nav-item nav-link" href="team.html">Our Team</a>
+          <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+
+      <div id="image" class="jumbotron py-4 my-4 text-center">
+        <h1 class="display-5">Let's take your photo!</h1>
+        <p class="display-6 lead py-2"></p>
+        <p></p>
+        <div class = "video-area">
+          <video id="video" width="400" height="300" autoplay muted></video>
+        </div>
+        <div class = "button-area">
+          <button id = "snap" class="btn btn-light btn-lg">
+            Snap!
+          </button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class = "camera-area">
+          <canvas id = "canvas" width= "400" height= "300"></canvas>
+        </div>
+        <div class = "camera-area">
+          <canvas id = "rectangleCanvas" width = "56" height = "70"></canvas>
+        </div>
+      </div>
+    </div>
+ 
+
+    <div id="boothback">
+      
+
+      <div class="designer">
+        <div class="divdrag" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket1%20(1).png?v=1576565612264"
+            width="131"
+            height="175"
+          />
+        </div>
+
+        <div class="divdrag" style="display:inline-block">
+          <img
+           
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket2%20(1).png?v=1576565611300"
+            width="131"
+            height="175"
+          />
+        </div>
+
+        <div class="divdrag" style="display:inline-block">
+          <img
+           
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket4%20(1).png?v=1576565611395"
+            width="131"
+            height="175"
+          />
+        </div>
+      </div>
+      
+      <div class="designer2">
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants1%20(1).png?v=1576565611869"
+            width="108"
+            height="230"
+          />
+        </div>
+
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants2%20(1).png?v=1576565611024"
+            width="108"
+            height="230"
+          />
+        </div>
+
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants3%20(1).png?v=1576565611628"
+            width="108"
+            height="230"
+          />
+        </div>
+      </div>
+      
+      <div class="designer3">
+        <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat1%20(1).png?v=1576565610958"
+            width="70"
+            height="auto"
+          />
+        </div>
+
+        <div class="hat" style="display:inline-block">
+          <img
+          
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat2%20(1).png?v=1576565610889"
+            width="70"
+            height="auto"
+          />
+        </div>
+
+        <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat3%20(1).png?v=1576565610763"
+            width="66"
+            height="auto"
+          />
+        </div>
+        
+          <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat4%20(1).png?v=1576565610816"
+            width="66"
+            height="auto"
+          />
+        </div>
+        
+          <div class="hat" style="display:inline-block">
+          <img
+          
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsanta-beard-png-transparent-8%20(1).png?v=1576564523789"
+            width="auto"
+            height="70"
+          />
+        </div>
+        
+      
+      </div>
+
+
+      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+      <!--   ------------------------------ -->
+
+      <div id="droppable2" class="ui-widget-header">
+        <div id="faceImage"></div>
+<!--         <p>Drop here</p> -->
+       
+        <!--     <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" /> -->
+      </div>
+            <div class="designer4">
+
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots3.png?v=1576466673474"
+            width="160"
+            height="78"
+          />
+        </div>
+
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots4.png?v=1576466675693"
+            width="160"
+            height="78"
+          />
+        </div>
+              
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots2.png?v=1576466671284"
+            width="160"
+            height="78"
+          />
+        </div>              
+      </div>
+    </div>
+    <button onclick="finalCostume()" class="finbtn">Finish Costume</button>
+    </div>
+    <!--   -------------------------------------------------/ -->
+
+    <footer class="bg-image text-center">
+        <div class="content-wrap">
+          <p>
+            Reach out to us!
+          </p>
+          <div class="contact-info">
+            <div>
+                <a href="mailto:raima.hossain.229@my.csun.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/raima-hossain-se/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100008884185149" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+            <p>Copyright 2019 | Santa's Costume Booth</p>
+        </div>
+      </footer>
+  </body>
+</html>
